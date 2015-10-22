@@ -1,0 +1,20 @@
+﻿规则：尽量指定结尾(即以$结尾)，否则越精确的越写在前面，
+([0-9])或(\d)：单个数字
+([0-9]?)：0或1个数字
+([0-9]+)：至少一个数字
+([0-9]{5})：5个数字
+([0-9]{2-5})：2-5个数字
+([0-9]*)：任意个数字
+(.+)：任意字符，用于搜索关键字
+(\w+)：匹配包括下划线的任何单词字符，等价于[A-Za-z0-9_]
+\W：与上面那个刚好相反
+
+
+/News$             /Default.aspx?File=News
+/News/List$             /Default.aspx?File=News&Action=List
+/News/List/数$             /Default.aspx?File=News&Action=List&ClassID=$1&Page=1
+/News/List/数/数             /Default.aspx?File=News&Action=List&ClassID=$1&Page=$2
+/News/Detail/数$             /Default.aspx?File=News&Action=Detail&ID=$1&Page=1
+
+/Search/字/数$             /Default.aspx?Action=Search&Search=$1&Page=$2
+/Search/字$             /Default.aspx?Action=Search&Search=$1&Page=1
