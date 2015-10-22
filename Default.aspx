@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Url重写</title>
+	<title>UrlReWrite.cs</title>
 </head>
 <body>
 	<a href="/News">/News</a><br />
